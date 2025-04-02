@@ -63,5 +63,8 @@ def index():
 
     return render_template('index.html', images=images, query=query, order=order, page=page, total_pages=total_pages, pagination=pagination, show_pagination=show_pagination)
 
+def handler(event, context):
+return app(event, context)
+    
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080)
